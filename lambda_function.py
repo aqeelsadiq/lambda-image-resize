@@ -22,7 +22,7 @@ def lambda_handler(event, context):
         destination_bucket = 'resized-image-bucket-aq'
         
         key = urllib.parse.unquote_plus(event['Records'][0]['s3']['object']['key'])
-        print(f"Processing key: {key}")
+        print(f"Processing key processing key: {key}")
 
         # Download image from S3
         response = s3.get_object(Bucket=source_bucket, Key=key)
